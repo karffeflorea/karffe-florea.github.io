@@ -494,9 +494,12 @@
         </div>
       </div>
       <div class="modal-body">
-        <p class="hint">Desliza para ver ambas páginas. (Si no cargan, revisa que se llamen <b>menu-1.jpg</b> y <b>menu-2.jpg</b> en el repo.)</p>
-        <img class="menu-img" src="menu-1.jpg" alt="Menú página 1" loading="lazy">
-        <img class="menu-img" src="menu-2.jpg" alt="Menú página 2" loading="lazy">
+        <!-- CAMBIO: el hint ahora dice los nombres correctos -->
+        <p class="hint">Desliza para ver ambas páginas. (Si no cargan, revisa que en el repo se llamen exactamente <b>MENU-1.jpeg</b> y <b>MENU-2.jpeg</b>.)</p>
+
+        <!-- CAMBIO: rutas correctas según tu repo -->
+        <img class="menu-img" src="MENU-1.jpeg" alt="Menú página 1" loading="lazy">
+        <img class="menu-img" src="MENU-2.jpeg" alt="Menú página 2" loading="lazy">
       </div>
     </div>
   </div>
@@ -537,10 +540,9 @@
       if (e.key === 'Escape' && modal.classList.contains('open')) close();
     });
 
-    // Abrir cada imagen en pestaña nueva
-    document.getElementById('openImg1').addEventListener('click', () => window.open('menu-1.jpg', '_blank'));
-    document.getElementById('openImg2').addEventListener('click', () => window.open('menu-2.jpg', '_blank'));
+    // CAMBIO: Abrir cada imagen con el nombre correcto (MENU-1.jpeg / MENU-2.jpeg)
+    document.getElementById('openImg1').addEventListener('click', () => window.open('MENU-1.jpeg', '_blank'));
+    document.getElementById('openImg2').addEventListener('click', () => window.open('MENU-2.jpeg', '_blank'));
   </script>
 </body>
 </html>
-
