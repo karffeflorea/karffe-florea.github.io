@@ -6,20 +6,19 @@
   <title>Karffe & Florea | Café, flores y momentos que florecen</title>
   <meta name="description" content="Karffe & Florea: café, flores y momentos que florecen. Menú digital, bebidas frías y calientes, repostería y antojitos." />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg: #FBF6EE;           /* crema */
-      --surface: #FFFFFF;      /* blanco */
-      --ink: #2A1E17;          /* café oscuro */
-      --muted: #6B5B52;        /* café suave */
-      --coffee: #7A4E2E;       /* café medio */
-      --accent: #B07A4A;       /* dorado-café */
-      --rose: #C77B7B;         /* toque floral */
+      --bg: #FBF6EE;
+      --surface: #FFFFFF;
+      --ink: #2A1E17;
+      --muted: #6B5B52;
+      --coffee: #7A4E2E;
+      --accent: #B07A4A;
+      --rose: #C77B7B;
       --line: rgba(42,30,23,.12);
       --shadow: 0 18px 55px rgba(42,30,23,.10);
       --radius: 18px;
@@ -38,98 +37,64 @@
     }
 
     a{ color: inherit; text-decoration: none; }
-    .container{
-      width: min(1100px, 92vw);
-      margin: 0 auto;
-    }
+    .container{ width: min(1100px, 92vw); margin: 0 auto; }
 
-    /* Top nav */
+    /* NAV */
     .nav{
-      position: sticky;
-      top: 0;
-      z-index: 50;
+      position: sticky; top: 0; z-index: 50;
       backdrop-filter: blur(12px);
       background: rgba(251,246,238,.72);
       border-bottom: 1px solid var(--line);
     }
     .nav-inner{
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      padding: 12px 0;
-      gap: 12px;
+      display:flex; align-items:center; justify-content: space-between;
+      padding: 12px 0; gap: 12px;
     }
     .brand{
-      display:flex;
-      align-items:center;
-      gap: 10px;
-      font-weight: 600;
-      letter-spacing: .2px;
+      display:flex; align-items:center; gap: 10px;
+      font-weight: 600; letter-spacing: .2px;
     }
     .brand-badge{
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      display:grid;
-      place-items:center;
+      width: 38px; height: 38px; border-radius: 12px;
+      display:grid; place-items:center;
       background: linear-gradient(135deg, rgba(176,122,74,.18), rgba(199,123,123,.18));
       border: 1px solid var(--line);
     }
     .brand-badge svg{ width: 22px; height: 22px; opacity: .9; }
 
     .nav-links{
-      display:flex;
-      gap: 18px;
-      align-items:center;
-      font-size: 14px;
-      color: var(--muted);
+      display:flex; gap: 18px; align-items:center;
+      font-size: 14px; color: var(--muted);
     }
     .nav-links a{ padding: 8px 10px; border-radius: 12px; }
     .nav-links a:hover{ background: rgba(42,30,23,.06); color: var(--ink); }
 
-    .nav-cta{
-      display:flex;
-      gap: 10px;
-      align-items:center;
-    }
+    .nav-cta{ display:flex; gap: 10px; align-items:center; }
 
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap: 10px;
+      display:inline-flex; align-items:center; justify-content:center; gap: 10px;
       border: 1px solid var(--line);
-      padding: 11px 14px;
-      border-radius: 14px;
-      font-weight: 600;
-      font-size: 14px;
+      padding: 11px 14px; border-radius: 14px;
+      font-weight: 600; font-size: 14px;
       cursor: pointer;
       transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-      user-select: none;
-      white-space: nowrap;
+      user-select: none; white-space: nowrap;
+      background: rgba(255,255,255,.65);
     }
     .btn:hover{ transform: translateY(-1px); box-shadow: 0 10px 30px rgba(42,30,23,.12); }
     .btn:active{ transform: translateY(0px); box-shadow: none; }
-
     .btn-primary{
       background: linear-gradient(135deg, var(--coffee), var(--accent));
       color: #fff;
       border-color: transparent;
     }
-    .btn-ghost{
-      background: rgba(255,255,255,.65);
-    }
     .btn svg{ width: 18px; height: 18px; }
 
-    /* Hero */
-    .hero{
-      padding: 34px 0 18px;
-    }
+    /* HERO */
+    .hero{ padding: 34px 0 18px; }
     .hero-grid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 28px;
-      align-items: stretch;
+      display:grid; grid-template-columns: 1.1fr .9fr;
+      gap: 28px; align-items: stretch;
     }
     .hero-card{
       background: rgba(255,255,255,.62);
@@ -142,29 +107,21 @@
     }
     .hero-card:before{
       content:"";
-      position:absolute;
-      inset:-80px -120px auto auto;
-      width: 280px;
-      height: 280px;
+      position:absolute; inset:-80px -120px auto auto;
+      width: 280px; height: 280px;
       background: radial-gradient(circle at 30% 30%, rgba(176,122,74,.28), transparent 60%);
-      filter: blur(2px);
       transform: rotate(12deg);
       pointer-events:none;
     }
     .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      padding: 8px 12px;
-      border-radius: 999px;
+      display:inline-flex; align-items:center; gap: 10px;
+      padding: 8px 12px; border-radius: 999px;
       background: rgba(42,30,23,.06);
       border: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 13px;
+      color: var(--muted); font-size: 13px;
     }
     .kicker .dot{
-      width: 8px; height: 8px;
-      border-radius: 999px;
+      width: 8px; height: 8px; border-radius: 999px;
       background: var(--rose);
       box-shadow: 0 0 0 6px rgba(199,123,123,.10);
     }
@@ -183,12 +140,7 @@
       margin: 0 0 18px;
       max-width: 58ch;
     }
-    .hero-actions{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 8px;
-    }
+    .hero-actions{ display:flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
 
     .hero-side{
       border-radius: var(--radius);
@@ -200,20 +152,15 @@
         url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1400&q=80");
       background-size: cover;
       background-position: center;
-      position: relative;
       min-height: 280px;
-      display:flex;
-      align-items:flex-end;
+      display:flex; align-items:flex-end;
       padding: 22px;
     }
-    .hero-side .overlay{
-      color: rgba(255,255,255,.92);
-    }
+    .hero-side .overlay{ color: rgba(255,255,255,.92); }
     .hero-side .overlay h2{
       font-family: Fraunces, serif;
       margin: 0 0 6px;
       font-size: 26px;
-      letter-spacing: -.2px;
     }
     .hero-side .overlay p{
       margin:0;
@@ -223,37 +170,21 @@
       max-width: 46ch;
     }
 
-    /* Section base */
-    section{
-      padding: 34px 0;
-    }
+    section{ padding: 34px 0; }
     .section-title{
-      display:flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 16px;
+      display:flex; align-items: baseline; justify-content: space-between;
+      gap: 16px; margin-bottom: 16px;
     }
     .section-title h3{
       font-family: Fraunces, serif;
-      font-size: 28px;
-      margin:0;
-      letter-spacing: -.2px;
+      font-size: 28px; margin:0;
     }
     .section-title p{
-      margin:0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.5;
-      max-width: 60ch;
+      margin:0; color: var(--muted);
+      font-size: 14px; line-height: 1.5; max-width: 60ch;
     }
 
-    /* Feature cards */
-    .grid-4{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
+    .grid-4{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .card{
       background: rgba(255,255,255,.72);
       border: 1px solid var(--line);
@@ -261,113 +192,17 @@
       padding: 16px;
       transition: transform .2s ease, box-shadow .2s ease;
     }
-    .card:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 14px 40px rgba(42,30,23,.10);
-    }
+    .card:hover{ transform: translateY(-2px); box-shadow: 0 14px 40px rgba(42,30,23,.10); }
     .icon{
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      display:grid;
-      place-items:center;
+      width: 42px; height: 42px; border-radius: 14px;
+      display:grid; place-items:center;
       background: linear-gradient(135deg, rgba(176,122,74,.18), rgba(199,123,123,.14));
       border: 1px solid var(--line);
       margin-bottom: 10px;
     }
-    .card h4{
-      margin:0 0 6px;
-      font-size: 15px;
-      letter-spacing: .2px;
-    }
-    .card p{
-      margin:0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
-    }
+    .card h4{ margin:0 0 6px; font-size: 15px; }
+    .card p{ margin:0; color: var(--muted); font-size: 13px; line-height: 1.45; }
 
-    /* Split section */
-    .split{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      align-items: stretch;
-    }
-    .panel{
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      overflow:hidden;
-      background: rgba(255,255,255,.70);
-      box-shadow: var(--shadow);
-    }
-    .panel-inner{
-      padding: 22px;
-    }
-    .panel h4{
-      font-family: Fraunces, serif;
-      font-size: 24px;
-      margin: 0 0 8px;
-    }
-    .panel p{
-      margin: 0 0 14px;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 14px;
-    }
-    .panel.media{
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.55)),
-        url("https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1400&q=80");
-      background-size: cover;
-      background-position: center;
-      display:flex;
-      align-items:flex-end;
-    }
-    .panel.media .panel-inner{
-      color: rgba(255,255,255,.92);
-    }
-    .panel.media p{ color: rgba(255,255,255,.78); }
-
-    /* Menu preview */
-    .menu-preview{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 16px;
-      align-items: stretch;
-    }
-    .menu-list{
-      display:grid;
-      gap: 10px;
-    }
-    .pill{
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 14px 14px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.75);
-    }
-    .pill strong{
-      font-size: 14px;
-    }
-    .pill span{
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .tag{
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(42,30,23,.05);
-      color: var(--muted);
-      white-space: nowrap;
-    }
-
-    /* Footer */
     footer{
       padding: 26px 0 38px;
       border-top: 1px solid var(--line);
@@ -386,11 +221,6 @@
       line-height: 1.6;
       max-width: 60ch;
     }
-    .social{
-      display:flex;
-      gap: 10px;
-      align-items:center;
-    }
     .chip{
       border: 1px solid var(--line);
       background: rgba(255,255,255,.7);
@@ -398,29 +228,96 @@
       padding: 9px 12px;
       font-size: 13px;
       color: var(--muted);
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
     }
 
-    /* Animations */
-    .fade-up{
-      opacity: 0;
-      transform: translateY(10px);
-      animation: fadeUp .75s ease forwards;
+    /* ===== MODAL MENÚ ===== */
+    .modal-backdrop{
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      z-index: 999;
     }
-    .delay-1{ animation-delay: .10s; }
-    .delay-2{ animation-delay: .22s; }
-    .delay-3{ animation-delay: .34s; }
-    .delay-4{ animation-delay: .46s; }
+    .modal-backdrop.open{ display:flex; }
 
-    @keyframes fadeUp{
-      to { opacity:1; transform: translateY(0); }
+    .modal{
+      width: min(980px, 96vw);
+      max-height: 92vh;
+      background: rgba(255,255,255,.96);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 18px;
+      box-shadow: 0 25px 80px rgba(0,0,0,.35);
+      overflow: hidden;
+      display:flex;
+      flex-direction: column;
+      animation: pop .18s ease-out;
+    }
+    @keyframes pop{
+      from{ transform: scale(.98); opacity:.7; }
+      to{ transform: scale(1); opacity:1; }
+    }
+    .modal-header{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(251,246,238,.85);
+    }
+    .modal-title{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing:.2px;
+    }
+    .modal-actions{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+    }
+    .icon-btn{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.75);
+      border-radius: 12px;
+      padding: 10px 12px;
+      cursor:pointer;
+      font-weight: 600;
+    }
+    .icon-btn:hover{ background: rgba(255,255,255,.95); }
+
+    .modal-body{
+      padding: 14px;
+      overflow: auto;
+      display:grid;
+      gap: 14px;
+      background: linear-gradient(180deg, rgba(251,246,238,.55), rgba(255,255,255,.92));
+    }
+    .menu-img{
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      box-shadow: 0 14px 35px rgba(42,30,23,.10);
+      background:#fff;
+    }
+    .hint{
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+      padding: 0 2px;
     }
 
     /* Responsive */
     @media (max-width: 920px){
       .hero-grid{ grid-template-columns: 1fr; }
       .grid-4{ grid-template-columns: 1fr 1fr; }
-      .split{ grid-template-columns: 1fr; }
-      .menu-preview{ grid-template-columns: 1fr; }
       .nav-links{ display:none; }
     }
     @media (max-width: 520px){
@@ -438,7 +335,6 @@
       <div class="nav-inner">
         <a class="brand" href="#top" aria-label="Ir al inicio">
           <span class="brand-badge" aria-hidden="true">
-            <!-- simple cup icon -->
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M6 9h10v5a5 5 0 0 1-5 5H9a3 3 0 0 1-3-3V9Z" stroke="currentColor" stroke-width="1.7" />
               <path d="M16 10h2a2 2 0 0 1 0 4h-2" stroke="currentColor" stroke-width="1.7" />
@@ -449,29 +345,21 @@
         </a>
 
         <div class="nav-links">
-          <a href="#menu">Menú</a>
           <a href="#cafe">Kaffes</a>
-          <a href="#flores">Flores & Detalles</a>
+          <a href="#flores">Flores</a>
           <a href="#visitanos">Visítanos</a>
         </div>
 
         <div class="nav-cta">
-          <a class="btn btn-ghost" href="#visitanos" title="Ver ubicación y horarios">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M12 22s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="1.7"/>
-              <path d="M12 12.5a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z" stroke="currentColor" stroke-width="1.7"/>
-            </svg>
-            Ubicación
-          </a>
-          <!-- BOTÓN FUNCIONAL AL MENÚ -->
-          <a class="btn btn-primary" href="menu.pdf" target="_blank" rel="noopener">
+          <!-- BOTÓN MENÚ: abre MODAL -->
+          <button class="btn btn-primary" id="btnMenu" type="button" aria-haspopup="dialog">
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M7 3h7l3 3v15a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7"/>
               <path d="M14 3v4h4" stroke="currentColor" stroke-width="1.7"/>
               <path d="M8 12h8M8 16h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
             </svg>
             Ver menú
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -482,29 +370,27 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-card">
-          <div class="kicker fade-up delay-1">
+          <div class="kicker">
             <span class="dot"></span>
             <span>Café artesanal · Postres · Flores & detalles</span>
           </div>
 
-          <h1 class="fade-up delay-2">Café, flores y momentos que florecen.</h1>
-          <p class="sub fade-up delay-3">
+          <h1>Café, flores y momentos que florecen.</h1>
+          <p class="sub">
             Un espacio para disfrutar bebidas calientes y frías, repostería dulce y salada,
             y pequeños detalles florales para hacer especial cualquier día.
           </p>
 
-          <div class="hero-actions fade-up delay-4">
-            <!-- BOTÓN FUNCIONAL AL MENÚ -->
-            <a class="btn btn-primary" href="menu.pdf" target="_blank" rel="noopener">
-              Ver menú (PDF)
-            </a>
-            <a class="btn btn-ghost" href="#cafe">
-              Explorar categorías
-            </a>
+          <div class="hero-actions">
+            <!-- BOTÓN MENÚ: abre MODAL -->
+            <button class="btn btn-primary" id="btnMenu2" type="button">
+              Ver menú
+            </button>
+            <a class="btn" href="#cafe">Explorar categorías</a>
           </div>
 
           <div style="margin-top:18px; color: var(--muted); font-size: 13px;">
-            Tip: guarda este link — es tu menú digital para QR ♾️
+            Tip: esto es perfecto para poner un QR ♾️
           </div>
         </div>
 
@@ -535,145 +421,40 @@
         <div class="card">
           <div class="icon">🥛</div>
           <h4>Latte</h4>
-          <p>Vainilla, menta o moka. Dulce y suave, ideal para disfrutar.</p>
+          <p>Moka, menta o vainilla. Suave y delicioso.</p>
         </div>
         <div class="card">
           <div class="icon">🧊</div>
           <h4>Fríos</h4>
-          <p>Iced latte, iced americano y opciones refrescantes para la tarde.</p>
+          <p>Iced latte, iced americano y opciones refrescantes.</p>
         </div>
         <div class="card">
-          <div class="icon">🍫</div>
-          <h4>Especiales</h4>
-          <p>Affogato, bombón Pura Vida y bebidas con toque de la casa.</p>
+          <div class="icon">🍰</div>
+          <h4>Repostería</h4>
+          <p>Crepas, waffles, postres fríos y antojitos para acompañar.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SPLIT: FLORES / EXPERIENCIA -->
   <section id="flores">
     <div class="container">
-      <div class="split">
-        <div class="panel">
-          <div class="panel-inner">
-            <h4>Flores & detalles</h4>
-            <p>
-              Un detalle cambia el día. Combiná tu café con un gesto bonito:
-              flores, regalos pequeños y momentos para compartir.
-            </p>
-            <a class="btn btn-ghost" href="#visitanos">Consultar / Visítanos</a>
-          </div>
-        </div>
-
-        <div class="panel media">
-          <div class="panel-inner">
-            <h4>Ambiente cálido</h4>
-            <p>Un espacio pensado para conversar, trabajar un rato o simplemente relajarte.</p>
-            <a class="btn btn-primary" href="menu.pdf" target="_blank" rel="noopener">Ver menú</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MENU PREVIEW + CTA -->
-  <section id="menu">
-    <div class="container">
       <div class="section-title">
-        <h3>Menú digital</h3>
-        <p>Todo el detalle de precios y tamaños está en el PDF para que sea fácil de leer y actualizar.</p>
-      </div>
-
-      <div class="menu-preview">
-        <div class="menu-list">
-          <div class="pill">
-            <div>
-              <strong>Bebidas calientes</strong><br/>
-              <span>Americano · Cappuccino · Chorreados · Latte</span>
-            </div>
-            <span class="tag">☕</span>
-          </div>
-
-          <div class="pill">
-            <div>
-              <strong>Frappés / Shakes / Smoothies</strong><br/>
-              <span>Karamel · Oreo · Nutella · Choko menta · Frutas</span>
-            </div>
-            <span class="tag">🧊</span>
-          </div>
-
-          <div class="pill">
-            <div>
-              <strong>Repostería & antojitos</strong><br/>
-              <span>Crepas · Waffles · Cheesecake · Empanadas</span>
-            </div>
-            <span class="tag">🍰</span>
-          </div>
-
-          <div class="pill">
-            <div>
-              <strong>Para picar</strong><br/>
-              <span>Papas fritas · Enyucados · Palitos de pollo</span>
-            </div>
-            <span class="tag">🍟</span>
-          </div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-inner">
-            <h4>¿Listo para elegir?</h4>
-            <p>
-              Abrí el menú completo en PDF. Ideal para QR en mesa, mostrador o redes.
-            </p>
-            <!-- BOTÓN FUNCIONAL AL MENÚ -->
-            <a class="btn btn-primary" href="menu.pdf" target="_blank" rel="noopener">
-              Abrir menú (PDF)
-            </a>
-            <div style="height:10px"></div>
-            <div class="small">
-              Consejo: subí tu archivo con el nombre <b>menu.pdf</b> para que el botón funcione siempre.
-            </div>
-          </div>
-        </div>
+        <h3>Flores & detalles</h3>
+        <p>Un gesto bonito cambia el día. Café + flores = momentos que florecen.</p>
       </div>
     </div>
   </section>
 
-  <!-- VISITANOS -->
   <section id="visitanos">
     <div class="container">
       <div class="section-title">
         <h3>Visítanos</h3>
-        <p>Cuando tengas dirección y horarios exactos, los colocamos aquí. Por ahora lo dejamos listo.</p>
-      </div>
-
-      <div class="grid-4">
-        <div class="card">
-          <div class="icon">🕒</div>
-          <h4>Horario</h4>
-          <p>Ejemplo: Lun–Sáb 10:00 am – 8:00 pm</p>
-        </div>
-        <div class="card">
-          <div class="icon">📍</div>
-          <h4>Ubicación</h4>
-          <p>Agregá aquí la dirección exacta / referencia.</p>
-        </div>
-        <div class="card">
-          <div class="icon">📞</div>
-          <h4>Contacto</h4>
-          <p>WhatsApp e Instagram (cuando estén listos).</p>
-        </div>
-        <div class="card">
-          <div class="icon">✨</div>
-          <h4>Detalles</h4>
-          <p>Pedidos especiales, fechas, y regalos con flores.</p>
-        </div>
+        <p>Cuando tengas dirección y horario exacto lo ponemos aquí.</p>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -690,20 +471,38 @@
           </div>
           <div class="small">
             Café, flores y momentos que florecen.<br/>
-            Hecho para QR y menú digital ♾️
+            Menú digital listo para QR ♾️
           </div>
         </div>
 
-        <div class="social">
+        <div>
           <span class="chip">📧 karffe.florea@gmail.com</span>
-          <a class="chip" href="menu.pdf" target="_blank" rel="noopener">📄 Menú PDF</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- ===== MODAL MENÚ ===== -->
+  <div class="modal-backdrop" id="menuModal" role="dialog" aria-modal="true" aria-label="Menú Karffe & Florea">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">📄 Menú Karffe & Florea</div>
+        <div class="modal-actions">
+          <button class="icon-btn" id="openImg1" type="button">Abrir pág. 1</button>
+          <button class="icon-btn" id="openImg2" type="button">Abrir pág. 2</button>
+          <button class="icon-btn" id="closeMenu" type="button">Cerrar ✕</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="hint">Desliza para ver ambas páginas. (Si no cargan, revisa que se llamen <b>menu-1.jpg</b> y <b>menu-2.jpg</b> en el repo.)</p>
+        <img class="menu-img" src="menu-1.jpg" alt="Menú página 1" loading="lazy">
+        <img class="menu-img" src="menu-2.jpg" alt="Menú página 2" loading="lazy">
+      </div>
+    </div>
+  </div>
+
   <script>
-    // Suaviza el scroll de los anchors
+    // Scroll suave
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const id = a.getAttribute('href');
@@ -714,6 +513,34 @@
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
+
+    // Modal
+    const modal = document.getElementById('menuModal');
+    const btnMenu = document.getElementById('btnMenu');
+    const btnMenu2 = document.getElementById('btnMenu2');
+    const closeMenu = document.getElementById('closeMenu');
+
+    const open = () => { modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    const close = () => { modal.classList.remove('open'); document.body.style.overflow = ''; }
+
+    btnMenu.addEventListener('click', open);
+    btnMenu2.addEventListener('click', open);
+    closeMenu.addEventListener('click', close);
+
+    // Cerrar al clicar fuera
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) close();
+    });
+
+    // Cerrar con ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) close();
+    });
+
+    // Abrir cada imagen en pestaña nueva
+    document.getElementById('openImg1').addEventListener('click', () => window.open('menu-1.jpg', '_blank'));
+    document.getElementById('openImg2').addEventListener('click', () => window.open('menu-2.jpg', '_blank'));
   </script>
 </body>
 </html>
+
