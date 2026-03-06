@@ -347,6 +347,7 @@
         <div class="nav-links">
           <a href="#cafe">Kaffes</a>
           <a href="#flores">Flores</a>
+          <a href="#karffemovil">KarffeMovil</a>
           <a href="#visitanos">Visítanos</a>
           <a href="#redes">Redes</a>
         </div>
@@ -450,6 +451,50 @@
     </div>
   </section>
 
+  <!-- NUEVO: KARFFEMOVIL -->
+  <section id="karffemovil">
+    <div class="container">
+      <div class="section-title">
+        <h3>Nuevo servicio: KarffeMovil</h3>
+        <p>Café gourmet para eventos: bodas, cumpleaños, baby shower, despedidas, corporativos y más.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="card" style="grid-column: span 2;">
+          <div class="icon">🚐☕</div>
+          <h4>Tu evento merece lo mejor</h4>
+          <p style="margin-top:6px;">
+            Karffe & Florea te ofrece un menú de bebidas gourmet para que tu actividad sea especial.
+          </p>
+
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="tel:+50672800821">📞 Llamar 7280-0821</a>
+            <a class="btn" href="#redes">Ver redes</a>
+            <a class="btn" href="#visitanos">Ver ubicación</a>
+          </div>
+
+          <p style="margin-top:12px; color: var(--muted); font-size:13px; line-height:1.6;">
+            Atención para: bodas, cumpleaños, baby shower, despedidas de solteros, eventos corporativos y más.
+          </p>
+        </div>
+
+        <div class="card" style="grid-column: span 2;">
+          <div class="icon">🧾</div>
+          <h4>Flyer</h4>
+          <p style="margin-top:6px;">Guardalo o compartilo con quien organice el evento.</p>
+
+          <div style="margin-top:12px; border-radius:14px; overflow:hidden; border:1px solid var(--line);">
+            <!-- IMPORTANTE:
+                 1) Subí tu imagen al repo con este nombre EXACTO: karffemovil.jpg
+                 2) Si la subís como .jpeg, cambiá aquí a karffemovil.jpeg
+            -->
+            <img src="karffemovil.jpg" alt="Flyer KarffeMovil" style="width:100%; display:block;" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="visitanos">
     <div class="container">
       <div class="section-title">
@@ -486,12 +531,11 @@
           <div class="icon">🕒</div>
           <h4>Horarios</h4>
           <p>
-            Lunes a Viernes: <b>—</b><br/>
-            Sábado: <b>—</b><br/>
-            Domingo: <b>—</b>
+            Lunes a Sábado: <b>10:00 a.m. – 7:30 p.m.</b><br/>
+            Domingo: <b>10:00 a.m. – 5:00 p.m.</b>
           </p>
-          <p style="margin-top:8px;">
-            (Decime el horario exacto y lo dejo fijo aquí.)
+          <p style="margin-top:8px; color: var(--muted);">
+            Te esperamos ✨
           </p>
         </div>
 
@@ -506,6 +550,9 @@
             <a href="https://www.instagram.com/karffeyflorea?igsh=eWxnMm9lN284a3Ax&utm_source=qr" target="_blank" rel="noopener" style="text-decoration: underline;">Instagram</a>,
             <a href="https://www.facebook.com/share/1Hyg2jkNYD/?mibextid=wwXIfr" target="_blank" rel="noopener" style="text-decoration: underline;">Facebook</a>,
             <a href="https://www.tiktok.com/@karffeyflorea?_r=1&_t=ZM-92Y3cJ87A4m" target="_blank" rel="noopener" style="text-decoration: underline;">TikTok</a>
+          </p>
+          <p style="margin-top:8px;">
+            Teléfono: <b>7280-0821</b>
           </p>
         </div>
       </div>
@@ -569,6 +616,7 @@
 
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
           <span class="chip">📧 karffe.florea@gmail.com</span>
+          <span class="chip">📞 7280-0821</span>
 
           <a class="chip" href="https://www.instagram.com/karffeyflorea?igsh=eWxnMm9lN284a3Ax&utm_source=qr" target="_blank" rel="noopener">📸 Instagram</a>
 
@@ -588,8 +636,7 @@
       <div class="modal-header">
         <div class="modal-title">📄 Menú Karffe & Florea</div>
         <div class="modal-actions">
-          <button class="icon-btn" id="openImg1" type="button">Abrir pág. 1</button>
-          <button class="icon-btn" id="openImg2" type="button">Abrir pág. 2</button>
+          <!-- CAMBIO: quitamos Abrir pág. 1 y 2 -->
           <button class="icon-btn" id="closeMenu" type="button">Cerrar ✕</button>
         </div>
       </div>
@@ -638,9 +685,7 @@
       if (e.key === 'Escape' && modal.classList.contains('open')) close();
     });
 
-    // Abrir cada imagen del menú
-    document.getElementById('openImg1').addEventListener('click', () => window.open('MENU-1.jpeg', '_blank'));
-    document.getElementById('openImg2').addEventListener('click', () => window.open('MENU-2.jpeg', '_blank'));
+    // Nota: eliminamos los listeners de openImg1/openImg2 porque ya no existen los botones.
   </script>
 </body>
 </html>
